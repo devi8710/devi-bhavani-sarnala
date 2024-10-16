@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include<string.h>
+char str[7]="devi";
+int i,c;
+void main()
+{
+    printf("enter a character to replace:");
+    scanf("%c",&c);
+    for(i=0;i<7;i++)
+    {
+        str[2]=c;
+    printf("%c",str[i]);
+}
+}
