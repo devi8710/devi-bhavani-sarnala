@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<string.h>
+char str1[10]="deevi",c,cn=0;
+int i;
+int main()
+{
+printf("Enter the character to check:");
+scanf("%c",&c);
+for(i=0;i<4;i++)
+{
+    if (c==str1[i])
+    {
+        cn=cn+1;
+    }
+    else
+    {
+        continue;
+            
+    }
+}
+printf("character repeated %d ",cn );
+
+}
