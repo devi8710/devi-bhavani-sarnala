@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include<string.h>
+char str[7]="devi",temp;
+int i,j;
+void main()
+{
+    for(i=0,j=6;i<=3,j>=3;i++,j--)
+    {
+        temp=str[i];
+        str[i]=str[j];
+        str[j]=temp;
+    }
+    for(i=0;i<7;i++)
+    printf("%c",str[i]);
+}
