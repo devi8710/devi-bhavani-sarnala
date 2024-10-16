@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<string.h>
+char str1[10]="devi",c;
+int i;
+int main()
+{
+printf("Enter the character to check:");
+scanf("%c",&c);
+for(i=0;i<4;i++)
+{
+    if (c==str1[i])
+    {
+        printf("its is present");
+        break;
+    }
+    else
+    {continue;
+            printf("its not found");
+    }
+
+}
+}
