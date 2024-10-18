@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<conio.h>
+int gcd(int,int);
+bool prime(int,int);
+bool prime(int a,int b)
+{
+    return gcd(a,b)==1;
+}
+int gcd(int a,int b)
+{
+    while(b>0)
+    {
+        int temp;
+        temp=a;
+        a=b;
+        b=temp%b;
+    }
+    return a;
+}
+void main()
+{
+int a;
+printf("Enter a limit number:");
+scanf("%d",&a);
+    for(int i=5;i<=a;i++)
+    {
+    for(int j=4;j<=i;j++)
+    {
+        for(int k=3;k<=j;k++)
+        {
+            if((j*j+k*k==i*i))
+            {
+                if(prime(i,j)&&prime(j,k)&&prime(k,i))
+                {
+                    printf("%d %d %d\n",k,j,i);
+                }
+            }
+        }
+    }
+}
+}
