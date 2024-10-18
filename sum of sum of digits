@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int digits(int);
+int digits(int n)
+{
+    int res=0;
+    while(n>0)
+    {
+        res=res+n%10;
+        n=n/10;
+    }
+    return res;
+}
+void main()
+{
+    int sum=0;
+    int n[10]={12,22,33,44,55,66,77,88,99,100};
+    for(int i=0;i<10;i++)
+    {
+        sum=sum+digits(n[i]);
+    }
+    printf("sum of sun of digits is %d:",sum);
+}
