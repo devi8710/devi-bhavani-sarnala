@@ -1,4 +1,9 @@
-n1=int(input("Enter 1st number"))
-n2=int(input("Enter 2nd number"))
-add=n1+n2
-print("addition of two numbers",add)
+#include<stdio.h>
+int main()
+{
+int a,b;
+printf("Enter two number:");
+scanf("%d%d",&a,&b);
+int c=a+b;
+printf("Addition of two numbers is %d",c);
+}
