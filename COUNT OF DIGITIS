@@ -1,16 +1,21 @@
 #include<stdio.h>
-int main(){
-int n,cn=0;
-printf("Enter a number:");
-scanf("%d",&n);
-if(n==0){
-    cn=1;
-}else{
-while (n!=0){
-n=n/10;
-cn+1;
-}
-}
+int main()
+{
+    int n,cn=0;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    if(n==0)
+    {
+        cn=1;
+    }
+    else
+    {
+        while (n!=0)
+        {
+            n=n/10;
+            cn=cn+1;
+        }
+    }
 printf("%d\n",cn);
 return 0 ;
 }
