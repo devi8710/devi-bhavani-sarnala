@@ -1,0 +1,44 @@
+#include<stdio.h>
+struct Exam
+{
+	int id;
+	char name[20];
+	char subject[20];
+	double marks;
+};
+void accept(struct Exam e[100],int n);
+void display(struct Exam e[100],int n);
+int main()
+{
+	struct Exam e[100];
+	int n;
+	printf("Enter no.of students:");
+	scanf("%d",&n);
+	accept(e,n);
+	display(e,n);
+	return 0;
+}
+void accept(struct Exam e[100],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("\nEnter student%d id:",i+1);
+		scanf("%d",&e[i].id);
+		printf("\nEnter student%d name:",i+1);
+		scanf(" %[^\n]",e[i].name);
+		printf("\nEnter student%d subject:",i+1);
+		scanf(" %[^\n]",e[i].subject);
+		printf("\nEnter student%d marks:",i+1);
+		scanf("%lf",&e[i].marks);
+		
+	}
+}
+void display(struct Exam e[100],int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("\n%d %s %s %lf",e[i].id,e[i].name,e[i].subject,e[i].marks);
+	}
+}
